@@ -11,7 +11,7 @@ from utb
 group by b_v_id
 having sum(b_vol)<>255)
 group by q_name
-having sum (case when v_color='R' then b_vol else 0 end) = 255
-and sum (case when v_color='G' then b_vol else 0 end) = 255
-and sum (case when v_color='B' then b_vol else 0 end) = 255
+having sum (case when v_color='R' then b_vol end) = 255
+and sum (case when v_color='G' then b_vol end) = 255
+and sum (case when v_color='B' then b_vol end) = 255
 order by 1
